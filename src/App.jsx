@@ -17,6 +17,15 @@ function App() {
                 {primoTesto} {/* Frease Iniettata */}
             </div>
             
+            <div>
+                {secondText}
+                <div>
+                    <button onClick={() => {
+                        setSecondText('Questo è la seconda frase modificata')
+                        console.log(secondText);
+                    } }>Cliccami</button>
+                </div> 
+            </div>
         </div>
     )
 }
