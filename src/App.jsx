@@ -15,12 +15,14 @@ function App() {
 
     // Contatore
     const [counter, setCounter] = useState(0)
-    
+
     return (
         <div>
-            Questa è l'inizio di React
-            <div>
-                {primoTesto} {/* Frease Iniettata */}
+            {/* Injection */}
+            <div>    
+                <div>
+                    {primoTesto} {/* Frease Iniettata */}
+                </div>
             </div>
             
             {/* Modifica Variabile */}
@@ -36,7 +38,13 @@ function App() {
             
             {/* Contatore */}
             <div>
-
+                {counter}
+                <div>
+                    <button onClick={() => setCounter(count => count + 1)}>Aunmenta</button>
+                </div>
+                <div>
+                    <button onClick={() => setCounter(count => count - 1)}>Diminuisci</button>
+                </div>
             </div>
         </div>
     )
