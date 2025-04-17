@@ -7,6 +7,8 @@
 import { useState } from "react";
 
 function App() {
+    //  LOGICA ------------------------------------------------
+
     // Injection
     let primoTesto = 'Questa è una frase'  // Frase da Inietatre 
 
@@ -15,11 +17,24 @@ function App() {
 
     // Contatore
     const [counter, setCounter] = useState(0)
+    
+    // Contatore con la Function
+    const [functionCounter, setFunctionCounter] = useState(0)
+    function increaseCounter() {
+        setFunctionCounter(c => c + 1)
+    }
+    function decreaseCounter() {
+        setFunctionCounter(c => c - 1)
+    }
 
+
+    //  TEMPLATE ------------------------------------------------
+    
     return (
         <div>
             {/* Injection */}
-            <div>    
+            <div>
+                <h3>Injection</h3>
                 <div>
                     {primoTesto} {/* Frease Iniettata */}
                 </div>
@@ -27,6 +42,7 @@ function App() {
             
             {/* Modifica Variabile */}
             <div>
+                <h3>UseState</h3>
                 {secondText}
                 <div>
                     <button onClick={() => {
@@ -38,14 +54,18 @@ function App() {
             
             {/* Contatore */}
             <div>
-                {counter}
+                <h3>Contatore</h3>
                 <div>
-                    <button onClick={() => setCounter(count => count + 1)}>Aunmenta</button>
-                </div>
-                <div>
-                    <button onClick={() => setCounter(count => count - 1)}>Diminuisci</button>
+                    {counter}
+                    <div>
+                        <button onClick={() => setCounter(count => count + 1)}>Aunmenta</button>
+                    </div>
+                    <div>
+                        <button onClick={() => setCounter(count => count - 1)}>Diminuisci</button>
+                    </div>
                 </div>
             </div>
+
         </div>
     )
 }
