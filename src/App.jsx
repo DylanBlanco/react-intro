@@ -66,6 +66,21 @@ function App() {
                 </div>
             </div>
 
+            {/* Contatore con la Function */}
+            <div>
+                <h3>Contatore con Function</h3>
+                <div>
+                    <b>
+                        Counter: {functionCounter}
+                    </b>
+                    <div>
+                        <button onClick={() => increaseCounter()}>Aumenta</button>
+                    </div>
+                    <div>
+                        <button onClick={() => decreaseCounter()}>Decrementa</button>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
