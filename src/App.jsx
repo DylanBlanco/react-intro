@@ -28,12 +28,13 @@ function App() {
     }
     
     // Object Function
+    const [objFunctCount, setobjFunctCount] = useState(0)
     const changeCounter = {
         increaseCounter: () => {
-            setFunctionCounter(c => c + 1)
+            setobjFunctCount(c => c + 1)
         },
         decreaseCounter: () => {
-            setFunctionCounter(c => c - 1)
+            setobjFunctCount(c => c - 1)
         }
     }
 
@@ -93,6 +94,20 @@ function App() {
             </div>
 
             {/* Oggetto Function */}
+            <div>
+                <h3>Contatore con Function</h3>
+                <div>
+                    <b>
+                        Counter: {objFunctCount}
+                    </b>
+                    <div>
+                        <button onClick={() => changeCounter.increaseCounter()}>Aumenta</button>
+                    </div>
+                    <div>
+                        <button onClick={() => changeCounter.decreaseCounter()}>Decrementa</button>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
