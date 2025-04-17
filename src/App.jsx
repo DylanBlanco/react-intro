@@ -109,6 +109,8 @@ function App() {
                 </div>
             </div>
 
+            {/* Counter con nuovo Componente */}
+            <NewCount />
         </div>
 
     )
