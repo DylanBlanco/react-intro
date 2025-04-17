@@ -115,10 +115,40 @@ function App() {
 }
 
 function NewCount() {
+    //  LOGICA ------------------------------------------------
+    // Contatore obj
+    const [newCounter, setnewCounter] = useState(0)
+    const objCounter = {
+        incrCount: () => {
+            setnewCounter(c => c + 1)
+        },
+        decrCount: () => {
+            setnewCounter(c => c - 1)
+        }
+    }
 
 
     //  TEMPLATE ------------------------------------------------
     return (
+        <div>
+            <div>
+                <h2>New Component</h2>
+
+                {/* Contatore obj */}
+                <div>
+                    <h3>New Counter</h3>
+                    <div>
+                        Contatore: {newCounter}
+                        <div>
+                            <button onClick={objCounter.incrCount}>Aumenta</button>
+                        </div>
+                        <div>
+                            <button onClick={objCounter.decrCount}>Diminuisci</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     )
 }
 
