@@ -3,13 +3,19 @@
 // import viteLogo from '/vite.svg'
 // import './App.css'
 
+// UseState è un HOOK che rende le variabili reattive
 import { useState } from "react";
 
 function App() {
-    let primoTesto = 'Questa è una frase'  // Frase da Inietatre  
-    // per cambiare testo dobbiamo usare una variabile di stato
+    // Injection
+    let primoTesto = 'Questa è una frase'  // Frase da Inietatre 
+
+    // useState - per cambiare testo dobbiamo usare una variabile di stato
     const [secondText, setSecondText] = useState('questa è la seconda frase | Da modificare')
 
+    // Contatore
+    const [counter, setCounter] = useState(0)
+    
     return (
         <div>
             Questa è l'inizio di React
@@ -17,6 +23,7 @@ function App() {
                 {primoTesto} {/* Frease Iniettata */}
             </div>
             
+            {/* Modifica Variabile */}
             <div>
                 {secondText}
                 <div>
@@ -25,6 +32,11 @@ function App() {
                         console.log(secondText);
                     } }>Cliccami</button>
                 </div> 
+            </div>
+            
+            {/* Contatore */}
+            <div>
+
             </div>
         </div>
     )
