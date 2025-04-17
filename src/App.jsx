@@ -26,6 +26,16 @@ function App() {
     function decreaseCounter() {
         setFunctionCounter(c => c - 1)
     }
+    
+    // Object Function
+    const changeCounter = {
+        increaseCounter: () => {
+            setFunctionCounter(c => c + 1)
+        },
+        decreaseCounter: () => {
+            setFunctionCounter(c => c - 1)
+        }
+    }
 
 
     //  TEMPLATE ------------------------------------------------
@@ -81,6 +91,8 @@ function App() {
                     </div>
                 </div>
             </div>
+
+            {/* Oggetto Function */}
         </div>
     )
 }
