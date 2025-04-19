@@ -8,13 +8,13 @@ body {
 
 .counter-body {
     background-color: rgb(123, 123, 126);
-    padding: 5% 10%;
 }
 
 .container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    padding: 5% 10%;
 }
 
 .counter-body .box-counter {
