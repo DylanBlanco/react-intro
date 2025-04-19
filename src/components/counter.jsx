@@ -1,3 +1,4 @@
+import './css/style.css'
 import { useState } from "react"
 
 function Counter () {
@@ -16,20 +17,22 @@ function Counter () {
 
     //  TEMPLATE  ------------------------------------------------
     return (
-        <div>
-            <div>
-                <h2>Contatore con nuovo componente</h2>
+        <div className='counter-body'>
+            <h1>Questo è un Nuovo Componente</h1>
 
+            <div className='container'>
                 {/* Contatore obj */}
-                <div>
+                <div className='box-counter'>
                     <h3>Component Counter</h3>
-                    <div>
+                    <p>
                         Contatore: {counterComponent}
-                        <div>
-                            <button onClick={counter.increaseC}>Aumenta</button>
-                        </div>
+                    </p>
+                    <div className='counter'>
                         <div>
                             <button onClick={counter.decreaseC}>Diminuisci</button>
+                        </div>
+                        <div>
+                            <button onClick={counter.increaseC}>Aumenta</button>
                         </div>
                     </div>
                 </div>
