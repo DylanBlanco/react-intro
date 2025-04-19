@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 function Counter () {
-    //  LOGICA  ----------------------------------------
+    //  LOGICA  --------------------------------------------------
 
     const [counterComponent, setCounterComponent] = useState(0)
     const counter = {
@@ -14,7 +14,7 @@ function Counter () {
     }
 
 
-    //  TEMPLATE  --------------------------------------
+    //  TEMPLATE  ------------------------------------------------
     return (
         <div>
             <div>
