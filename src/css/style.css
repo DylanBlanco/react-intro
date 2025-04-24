@@ -31,3 +31,25 @@ body {
     justify-content: center;
     gap: 5%;
 }
+
+.cardJsx {
+    width: 15%;
+    padding: 1rem;
+    border-radius: 10%;
+    height: 250px;
+    box-shadow: 20px;
+    overflow-y: auto;
+}
+
+.cardJsx h3 {
+    text-align: center;
+}
+
+.cardJsx div {
+    margin-bottom: 10%;
+}
+
+ul {
+    list-style: none;
+    padding-inline-start: 0;
+}

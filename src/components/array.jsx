@@ -1,4 +1,5 @@
 // STYLE
+import { useState } from 'react'
 import '../css/array.css'
 
 function Array () {
@@ -13,6 +14,22 @@ function Array () {
         'Laravel'
     ]
 
+    // Array codLanguagesAdd - Variabile di stato
+    const [codLanguagesAdd, setcodLanguagesAdd] = useState([
+        'Html',
+        'Css',
+        'JavaScript',
+        'Vue.js',
+        'React',
+        'PHP',
+        'Laravel'
+    ])
+
+    function addLanguage() {
+        console.log('hai fatto click su addLanguage');
+        setcodLanguagesAdd(l => [...l, 'php'])
+    }
+
     //  TEMPLATE  ----------------------------------------------
     return(
         <div className='array-component'>
@@ -22,11 +39,29 @@ function Array () {
             <div className='container'>
                 <div className="cardJsx">
                     <h3>Coding Languages</h3>
-                    {
-                        codLanguages.map((lang, i) => (
-                            <div key={lang + '_' + i}>{(i+1) + '.' + lang}</div>
-                        ))
-                    }
+                    <ul>
+                        {
+                            codLanguages.map((lang, i) => (
+                                <li key={lang + '_' + i}>
+                                    {(i+1) + '.' + lang}
+                                </li>
+                            ))
+                        }
+                    </ul>
+                </div>
+
+                <div className="cardJsx">
+                    <h3>Aggiunta Linguaggio</h3>
+                    <button onClick={addLanguage}>Aggiungi</button>
+                    <ul>
+                        {
+                            codLanguagesAdd.map((lang, i) => (
+                                <li key={lang + '_' + i}>
+                                    {(i+1) + '.' + lang}
+                                </li>
+                            ))
+                        }
+                    </ul>
                 </div>
             </div>
         </div>
