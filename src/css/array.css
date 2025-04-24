@@ -1,0 +1,13 @@
+.array-component {
+    background-color: rgb(110, 163, 217);
+}
+
+.cardJsx {
+    background-color: rgb(201, 205, 208);
+    width: 15%;
+    padding: 1rem;
+    border-radius: 10%;
+    height: 200px;
+    box-shadow: 20px;
+    overflow-y: auto;
+}

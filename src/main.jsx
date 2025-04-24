@@ -8,7 +8,7 @@ import './css/style.css'
 
 // Components ------------------------------------
 import Counter from './components/counter.jsx'
-import Condition from './components/condizioni.jsx'
+import Array from './components/array.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -22,6 +22,6 @@ createRoot(document.getElementById('root')).render(
         <Counter />
 
         {/* Condition Component */}
-        <Condition />
+        <Array />
     </StrictMode>,
 )
