@@ -20,7 +20,14 @@ function Array () {
                 Array Component
             </h1>
             <div className='container'>
-                
+                <div className="cardJsx">
+                    <h3>Coding Languages</h3>
+                    {
+                        codLanguages.map((lang, i) => (
+                            <div key={lang + '_' + i}>{(i+1) + '.' + lang}</div>
+                        ))
+                    }
+                </div>
             </div>
         </div>
     )
