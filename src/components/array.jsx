@@ -25,9 +25,20 @@ function Array () {
         'Laravel'
     ])
 
-    function addLanguage() {
-        console.log('hai fatto click su addLanguage');
+    // Lato per Calcolo Area
+    const [sides, setSides] = useState({
+        x: 10,
+        y: 6
+    })
+
+    function addLanguage() {  // Aggiungi linguagggio php
         setcodLanguagesAdd(l => [...l, 'php'])
+        console.log('hai aggiunto php');
+    }
+
+    function calcAreaTriangle() {  // Calcola Area
+        console.log('stai cercando di calcolare l`area')        
+        return sides.x * sides.y / 2
     }
 
     //  TEMPLATE  ----------------------------------------------
@@ -37,6 +48,8 @@ function Array () {
                 Array Component
             </h1>
             <div className='container'>
+
+                {/* Iterazione Array  */}
                 <div className="cardJsx">
                     <h3>Coding Languages</h3>
                     <ul>
@@ -50,6 +63,7 @@ function Array () {
                     </ul>
                 </div>
 
+                {/* Aggiungi Elemento */}
                 <div className="cardJsx">
                     <h3>Aggiunta Linguaggio</h3>
                     <button onClick={addLanguage}>Aggiungi</button>
@@ -62,6 +76,36 @@ function Array () {
                             ))
                         }
                     </ul>
+                </div>
+
+                {/* Array Reattivo */}
+                <div className="cardJsx">
+                    <h3>Calcola Aerea</h3>
+                    {/* Area Rettangolo */}
+                    <div className="areaRett">
+                        <h4>Area Rettangolo</h4>
+                        <div>
+                            <span>X: {sides.x}</span>
+                            <span>Y: {sides.y}</span>
+                        </div>
+                        <hr />
+                        <div>
+                            <b>Area: {sides.x * sides.y}</b>
+                        </div>
+                    </div>
+
+                    {/* Area Triangolo con function */}
+                    <div className="areaTri">
+                        <h4>Area Triangolo</h4>
+                        <div>
+                            <span>X: {sides.x}</span>
+                            <span>Y: {sides.y}</span>
+                        </div>
+                        <hr />
+                        <div>
+                            <b>Area: {calcAreaTriangle()}</b>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
