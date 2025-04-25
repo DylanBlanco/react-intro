@@ -49,6 +49,16 @@ function Array () {
     function calcAreaCircle() {
         return areaCircle
     }
+    
+    // Incrementa r * 2
+    function incrementR() {
+        setSides(side => {
+            return {
+                ...side,
+                r: side.r * 2,
+            }
+        })
+    }
 
     //  TEMPLATE  ----------------------------------------------
     return(
@@ -122,6 +132,9 @@ function Array () {
                         <div>
                             <span>p: {sides.p}</span>
                             <span>r: {sides.r}</span>
+                        </div>
+                        <div>
+                            <button onClick={incrementR}>Incrementa r*2</button>
                         </div>
                         <hr />
                         <div>
