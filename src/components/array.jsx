@@ -25,20 +25,29 @@ function Array () {
         'Laravel'
     ])
 
-    // Lato per Calcolo Area
+    // Misure Lati per Calcolo Area
     const [sides, setSides] = useState({
         x: 10,
-        y: 6
+        y: 6,
+        p: 3.14,
+        r: 2
     })
 
+    // Aggiunta Code Language
     function addLanguage() {  // Aggiungi linguagggio php
         setcodLanguagesAdd(l => [...l, 'php'])
         console.log('hai aggiunto php');
     }
 
-    function calcAreaTriangle() {  // Calcola Area
-        console.log('stai cercando di calcolare l`area')        
+    // Calcola Area Triangolo
+    function calcAreaTriangle() {      
         return sides.x * sides.y / 2
+    }
+
+    // Calcola Area Cerchio
+    const areaCircle = sides.p * (sides.r * sides.r)
+    function calcAreaCircle() {
+        return areaCircle
     }
 
     //  TEMPLATE  ----------------------------------------------
@@ -104,6 +113,19 @@ function Array () {
                         <hr />
                         <div>
                             <b>Area: {calcAreaTriangle()}</b>
+                        </div>
+                    </div>
+
+                    {/* Area Cerchio con function */}
+                    <div className="areaTri">
+                        <h4>Area Cerchio</h4>
+                        <div>
+                            <span>p: {sides.p}</span>
+                            <span>r: {sides.r}</span>
+                        </div>
+                        <hr />
+                        <div>
+                            <b>Area: {calcAreaCircle()}</b>
                         </div>
                     </div>
                 </div>
