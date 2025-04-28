@@ -5,10 +5,12 @@ import App from './App.jsx'
 // Style -----------------------------------------
 import './css/style.css'
 // import './index.css'
+import './css/input.css'
 
 // Components ------------------------------------
 import Counter from './components/counter.jsx'
 import Array from './components/array.jsx'
+import Input from './components/input.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -23,5 +25,8 @@ createRoot(document.getElementById('root')).render(
 
         {/* Condition Component */}
         <Array />
+
+        {/* Input */}
+        <Input />
     </StrictMode>,
 )

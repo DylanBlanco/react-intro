@@ -3,7 +3,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: #9eb9d1;
+    background-color: #bfc9d2;
 }
 
 .counter-body {
@@ -33,7 +33,7 @@ body {
 }
 
 .cardJsx {
-    width: 15%;
+    width: 25%;
     padding: 1rem;
     border-radius: 10%;
     height: 250px;
