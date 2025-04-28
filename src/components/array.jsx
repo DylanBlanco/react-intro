@@ -54,7 +54,7 @@ function Array () {
     function incrementR() {
         setSides(side => {
             return {
-                ...side,
+                ...side,  // pre cmabire solo r devo prima destrutturare l'oggetto precedente
                 r: side.r * 2,
             }
         })
