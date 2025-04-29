@@ -53,3 +53,9 @@ ul {
     list-style: none;
     padding-inline-start: 0;
 }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}

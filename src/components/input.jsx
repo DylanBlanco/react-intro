@@ -2,10 +2,27 @@ import { useState } from "react"
 
 function Input() {
     //  Logica  -----------------------------------------------
-    const [userDate, setUserData] = useState('')
+    
+    const [userData, setUserData] = useState('')
+    const [userLeng, setUserLeng] = useState('')
+    
+    //  Input
     function changeUserData (e) { // event - per ottenere valore digitato da utente
-    console.log(e.target) // target - per ottenere il vaolre dell'input
+        const element = e.target // target - per ottenere il vaolre dell'input
+        const v = element.value
+
+        setUserData(v)
     }
+
+    // Select
+    function selChangeUserData (e) { // event - per ottenere valore digitato da utente
+        const element = e.target // target - per ottenere il vaolre dell'input
+        const v = element.value
+
+        setUserLeng(v)
+    }
+
+
     //  Template  ---------------------------------------------
     return(
         <>
@@ -16,14 +33,35 @@ function Input() {
                     {/* Input */}
                     <div className="cardJsx">
                         <h3>Input</h3>
-                        <div>
-                            <input
-                            // type - tipo dell'input(text, number, mail, ecc...)
-                            type="text" 
-                            // value - Valore dell'input
-                            value={userDate}
-                            // onChange - gestore degli eventi
-                            onChange={changeUserData} />
+                        <div className="input-card">
+                            <h4>Input</h4>
+                            <div>
+                                <input
+                                // type - tipo dell'input(text, number, mail, ecc...)
+                                type="text" 
+                                // value - Valore dell'input
+                                value={userData}
+                                // onChange - gestore degli eventi, serve per rilevare cambiamenti nei campi di input
+                                onChange={changeUserData} />
+                                <div className="mini-text">{userData}</div>
+                            </div>
+                        </div>
+
+                        <hr />
+
+                        <div className="input-card">
+                            <h4>Select</h4>
+                            <div className="row">
+                                <div>
+                                    <select onChange={selChangeUserData} name="" id="">
+                                        <option value="">----</option>
+                                        <option value="Italiano">Italiano</option>
+                                        <option value="Inglese">Inglese</option>
+                                        <option value="Spagnolo">Spagnolo</option>
+                                    </select>
+                                </div>
+                                <div className="mini-text">{userLeng}</div>
+                            </div>
                         </div>
                     </div>
                 </div>

@@ -2,3 +2,23 @@
     background-color: rgb(231, 211, 187);
     padding: 20px 0;
 }
+
+input {
+    width: 50%;
+}
+
+.mini-text {
+    margin: 5px;
+    color: rgb(112, 133, 133);
+    font-size: 0.8rem;
+    font-weight: bolder;
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+}
+
+.input-card {
+    border: none;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+    background-color: beige;
+    border-radius: 10px 20px;
+    padding: 15px;
+}
