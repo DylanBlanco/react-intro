@@ -8,18 +8,22 @@ function Input() {
     
     //  Input
     function changeUserData (e) { // event - per ottenere valore digitato da utente
-        const element = e.target // target - per ottenere il vaolre dell'input
-        const v = element.value
+        // const element = e.target // target - per ottenere il vaolre dell'input
+        // const v = element.value
 
-        setUserData(v)
+        // setUserData(v)
+
+        setUserData(e.target.value) // funzione ridotta
     }
 
     // Select
     function selChangeUserData (e) { // event - per ottenere valore digitato da utente
-        const element = e.target // target - per ottenere il vaolre dell'input
-        const v = element.value
+        // const element = e.target // target - per ottenere il vaolre dell'input
+        // const v = element.value
 
-        setUserLeng(v)
+        // setUserLeng(v)
+
+        setUserLeng(e.target.value) // funzione ridotta
     }
 
 
