@@ -5,6 +5,7 @@ function Input() {
     
     const [userData, setUserData] = useState('')
     const [userLeng, setUserLeng] = useState('')
+
     const [schoolObjects, setSchoolObjects] = useState([
         { name: "Matita", category: "Scrittura", price: 0.50 },
         { name: "Penna", category: "Scrittura", price: 0.80 },
@@ -17,6 +18,8 @@ function Input() {
         { name: "Forbici", category: "Creatività", price: 2.50 },
         { name: "Zaino", category: "Contenitore", price: 20.00 }
     ])
+
+    const [objSelected, setObjSelected] = useState(schoolObjects.name)
     
     //  Input - function di interpolazione
     function changeUserData (e) { // event - per ottenere valore digitato da utente
@@ -36,6 +39,10 @@ function Input() {
         // setUserLeng(v)
 
         setUserLeng(e.target.value) // funzione ridotta
+    }
+
+    function changeSchoolObj (e) {
+        setObjSelected(e.target.value)
     }
 
 
@@ -99,15 +106,22 @@ function Input() {
 
                                 <div>
                                     <h4>Filtra</h4>
-                                    <select>
-                                        <option value="">Category</option>
-                                        <option value="">Category</option>
+                                    <select onChange={changeSchoolObj}>
+                                        <option value="">------</option>
+                                        {
+                                            schoolObjects.map((obj, i) => (
+                                                <option key={obj + '_' + i} value={obj.name}>{obj.name}</option>
+                                            ))
+                                        }
                                     </select>
                                 </div>
                             </div>
                             <hr />
-                            <div className="row">
-                                <p>-Risultato ricerca-</p>
+                            <div>
+                                <h4>Risultato Ricerca</h4>
+                                <div>
+                                    <p>{objSelected}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
