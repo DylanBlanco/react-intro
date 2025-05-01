@@ -45,6 +45,12 @@ function Input() {
         setObjSelected(e.target.value)
     }
 
+    // CheckBox
+    const [checked,setChecked] = useState(false)
+    function changeChecked() {
+        setChecked(prev => !prev)
+    }
+
 
     //  Template  ---------------------------------------------
     return(
@@ -87,6 +93,8 @@ function Input() {
                             </div>
                         </div>
                     </div>
+
+                    {/* ARRAY */}
                     <div className="cardJsx">
                         <h3>ARRAY</h3>
                         <div className="input-card">
@@ -121,6 +129,25 @@ function Input() {
                                     <p>{objSelected}</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    {/* Check-Box */}
+                    <div className="cardJsx">
+                        <h3>Check-Box</h3>
+                        <div className="input-card">
+                            <label htmlFor="color">
+                                <div>Select Color</div>
+                                <input type="checkbox" 
+                                    id="color"
+                                    value={checked}
+                                    onChange={changeChecked}
+                                />
+                            </label>
+                            <hr />
+                            {checked && (
+                                <div>Hai selezionato il cambio colore</div>
+                            )}
                         </div>
                     </div>
                 </div>
