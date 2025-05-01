@@ -137,7 +137,7 @@ function Input() {
                         <h3>Check-Box</h3>
                         <div className="input-card">
                             <label htmlFor="color">
-                                <div>Select Color</div>
+                                <div>Select Check-Box</div>
                                 <input type="checkbox" 
                                     id="color"
                                     value={checked}
@@ -146,7 +146,7 @@ function Input() {
                             </label>
                             <hr />
                             {checked && (
-                                <div>Hai selezionato il cambio colore</div>
+                                <div>Hai selezionato la Check-Box</div>
                             )}
                         </div>
                     </div>
