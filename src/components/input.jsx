@@ -6,7 +6,7 @@ function Input() {
     const [userData, setUserData] = useState('')
     const [userLeng, setUserLeng] = useState('')
 
-    const [schoolObjects, setSchoolObjects] = useState([
+    const schoolObjects = [
         { name: "Matita", category: "Scrittura", price: 0.50 },
         { name: "Penna", category: "Scrittura", price: 0.80 },
         { name: "Gomma", category: "Correzione", price: 0.30 },
@@ -17,7 +17,7 @@ function Input() {
         { name: "Colla stick", category: "Creatività", price: 1.00 },
         { name: "Forbici", category: "Creatività", price: 2.50 },
         { name: "Zaino", category: "Contenitore", price: 20.00 }
-    ])
+    ]
 
     const [objSelected, setObjSelected] = useState(schoolObjects.name)
     
@@ -100,20 +100,18 @@ function Input() {
                         <div className="input-card">
                             <div className="row">
                                 <div>
-                                    <h4>Cerca</h4>
-                                    <input type="text" />
-                                </div>
-
-                                <div>
-                                    <h4>Filtra</h4>
-                                    <select onChange={changeSchoolObj}>
-                                        <option value="">------</option>
-                                        {
-                                            schoolObjects.map((obj, i) => (
-                                                <option key={obj + '_' + i} value={obj.name}>{obj.name}</option>
-                                            ))
-                                        }
-                                    </select>
+                                    <h4>Filtra Ricerca</h4>
+                                    <div>
+                                        <p>Nome</p>
+                                        <select onChange={changeSchoolObj}>
+                                            <option value="">------</option>
+                                            {
+                                                schoolObjects.map((obj, i) => (
+                                                    <option key={obj + '_' + i} value={obj.name}>{obj.name}</option>
+                                                ))
+                                            }
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <hr />
