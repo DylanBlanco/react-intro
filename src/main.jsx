@@ -11,6 +11,7 @@ import './css/input.css'
 import Counter from './components/counter.jsx'
 import Array from './components/array.jsx'
 import Input from './components/input.jsx'
+import Condition from './components/condition.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -28,5 +29,8 @@ createRoot(document.getElementById('root')).render(
 
         {/* Input */}
         <Input />
+
+        {/* Conditions */}
+        <Condition />
     </StrictMode>,
 )
