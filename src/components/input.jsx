@@ -51,6 +51,12 @@ function Input() {
         setChecked(prev => !prev)
     }
 
+    //  BOX
+    const [dimensions, setDimensions] = useState({
+        w: 100,
+        h: 100
+    })
+
 
     //  Template  ---------------------------------------------
     return(
@@ -148,6 +154,21 @@ function Input() {
                             {checked && (
                                 <div>Hai selezionato la Check-Box</div>
                             )}
+                        </div>
+                    </div>
+
+                    {/* Box */}
+                    <div className="cardJsx">
+                        <h3>Box</h3>
+                        <div className="input-card">
+                            <h4>With</h4>
+                            <input type="range" />
+                            <div className="box-width"
+                                style={{
+                                    width: dimensions.w + 'px', 
+                                    heigth: dimensions.h + 'px'
+                                }}
+                            ></div>
                         </div>
                     </div>
                 </div>
