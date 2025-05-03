@@ -1,5 +1,5 @@
 import { useState } from "react"
-import BoxDimensions from "./input/boxDimensions"
+import BoxDimensions from "./boxDimensions"
 
 function Input() {
     //  Logica  -----------------------------------------------
@@ -212,9 +212,10 @@ function Input() {
                         </div>
                     </div>
                 </div>
-                <div className="container">
-                    <BoxDimensions />
-                </div>
+
+                {/* Component BoxDimensions */}
+                <h2>Component BoxDimensions</h2>
+                <BoxDimensions />
             </div>
         </>
     )
