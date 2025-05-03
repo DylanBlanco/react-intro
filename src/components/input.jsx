@@ -57,6 +57,24 @@ function Input() {
         h: 100
     })
 
+    function changeWidth(e) {
+        setDimensions(prev => {
+            return {
+                ...prev,
+                w: e.target.value
+            }
+        })
+    }
+
+    function changeHeigth(e) {
+        setDimensions(prev => {
+            return {
+                ...prev,
+                h: e.target.value
+            }
+        })
+    }
+
 
     //  Template  ---------------------------------------------
     return(
@@ -161,8 +179,32 @@ function Input() {
                     <div className="cardJsx">
                         <h3>Box</h3>
                         <div className="input-card">
-                            <h4>With</h4>
-                            <input type="range" />
+                            <h4>Dimensions</h4>
+
+                            <div className="row">
+                                <div>
+                                    <b>Width</b>
+                                    <input
+                                        type="range"
+                                        min={10}
+                                        max={150}
+                                        value={dimensions.w}
+                                        onChange={changeWidth}
+                                    />
+                                </div>
+
+                                <div>
+                                    <b>Heigth</b>
+                                    <input
+                                        type="range"
+                                        min={10}
+                                        max={150}
+                                        value={dimensions.h}
+                                        onChange={changeHeigth}
+                                    />
+                                </div>
+                            </div>
+
                             <div className="box-width"
                                 style={{
                                     width: dimensions.w + 'px', 
