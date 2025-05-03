@@ -1,4 +1,5 @@
 import { useState } from "react"
+import BoxDimensions from "./input/boxDimensions"
 
 function Input() {
     //  Logica  -----------------------------------------------
@@ -180,7 +181,6 @@ function Input() {
                         <h3>Box</h3>
                         <div className="input-card">
                             <h4>Dimensions</h4>
-
                             <div className="row">
                                 <div>
                                     <b>Width</b>
@@ -192,7 +192,6 @@ function Input() {
                                         onChange={changeWidth}
                                     />
                                 </div>
-
                                 <div>
                                     <b>Heigth</b>
                                     <input
@@ -204,7 +203,6 @@ function Input() {
                                     />
                                 </div>
                             </div>
-
                             <div className="box-width"
                                 style={{
                                     width: dimensions.w + 'px', 
@@ -213,6 +211,9 @@ function Input() {
                             ></div>
                         </div>
                     </div>
+                </div>
+                <div className="container">
+                    <BoxDimensions />
                 </div>
             </div>
         </>
