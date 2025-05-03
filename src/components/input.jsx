@@ -65,8 +65,8 @@ function Input() {
             }
         })
     }
-
-    function changeHeigth(e) {
+    
+    function changeHeight(e) {
         setDimensions(prev => {
             return {
                 ...prev,
@@ -200,7 +200,7 @@ function Input() {
                                         min={10}
                                         max={150}
                                         value={dimensions.h}
-                                        onChange={changeHeigth}
+                                        onChange={changeHeight}
                                     />
                                 </div>
                             </div>
