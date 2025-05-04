@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-function BoxDimensions () {
+function BoxDimensions (props) {
     const [dimensions, setDimensions] = useState({
         w: 100,
         h: 100
@@ -60,7 +60,7 @@ function BoxDimensions () {
                                 style={{
                                     width: dimensions.w + 'px',
                                     height:dimensions.h + 'px',
-                                    backgroundColor: "red",
+                                    backgroundColor: props.bgColor,
                                 }}>
                             </div>
                         </div>
