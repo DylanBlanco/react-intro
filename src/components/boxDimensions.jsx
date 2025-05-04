@@ -36,7 +36,7 @@ function BoxDimensions () {
 
                         <div>
                             <div>
-                                <b>Width</b>
+                                <b>Width </b>
                                 <input
                                     type="range"
                                     min={10}

@@ -216,6 +216,9 @@ function Input() {
                 {/* Component BoxDimensions */}
                 <h2>Component BoxDimensions</h2>
                 <BoxDimensions />
+
+                {/* Anche se richiamati, ogni component lavora a se */}
+                <BoxDimensions />
             </div>
         </>
     )
