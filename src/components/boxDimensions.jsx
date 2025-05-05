@@ -40,7 +40,6 @@ function BoxDimensions ({bgColor, width, height, children}) {  //  Props + propr
             <div>
                 {children}
             </div>
-            
             <div className="container">
                 <div className="cardJsx">
                     <div className="input-card">

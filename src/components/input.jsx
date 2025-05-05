@@ -1,5 +1,6 @@
 import { useState } from "react"
 import BoxDimensions from "./boxDimensions"
+import InnerBox from "./innerBox"
 
 function Input() {
     //  Logica  -----------------------------------------------
@@ -214,7 +215,7 @@ function Input() {
                 </div>
 
                 {/* Component BoxDimensions */}
-                <h2>Component BoxDimensions</h2>
+                <h2>Component BoxDimensions + Props</h2>
                 <BoxDimensions bgColor='#262C36' width={50} height={100} />
 
                 {/* Anche se richiamati, ogni component lavora a se */}
@@ -227,6 +228,10 @@ function Input() {
                         <p>La Proprietà Children serve a interpolare un contenuto all'nterno del props</p>
                     </div>
                 </BoxDimensions>
+
+                {/* InnerBox */}
+                <h1>InnerBox</h1>
+                <InnerBox />
             </div>
         </>
     )
