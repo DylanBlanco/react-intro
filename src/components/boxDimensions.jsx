@@ -1,9 +1,16 @@
 import { useState } from "react"
 
-function BoxDimensions (props) {
+// function BoxDimensions (props) {
+function BoxDimensions ({bgColor, width, height}) {
+    // const [dimensions, setDimensions] = useState({
+    //     w: 100,
+    //     h: 100
+    // })
+
+    // misure preimpostate con i props
     const [dimensions, setDimensions] = useState({
-        w: 100,
-        h: 100
+        w: width,
+        h: height
     })
 
     // Function che lega l'input con dimensions.w box
@@ -40,7 +47,7 @@ function BoxDimensions (props) {
                                 <input
                                     type="range"
                                     min={10}
-                                    max={150}
+                                    max={200}
                                     value={dimensions.w}
                                     onChange={changeWidth}
                                 />
@@ -50,7 +57,7 @@ function BoxDimensions (props) {
                                 <input
                                     type="range"
                                     min={10}
-                                    max={150}
+                                    max={200}
                                     value={dimensions.h}
                                     onChange={changeHeight}
                                 />
@@ -60,7 +67,8 @@ function BoxDimensions (props) {
                                 style={{
                                     width: dimensions.w + 'px',
                                     height:dimensions.h + 'px',
-                                    backgroundColor: props.bgColor,
+                                    // backgroundColor: props.bgColor,
+                                    backgroundColor: bgColor,
                                 }}>
                             </div>
                         </div>

@@ -215,10 +215,10 @@ function Input() {
 
                 {/* Component BoxDimensions */}
                 <h2>Component BoxDimensions</h2>
-                <BoxDimensions bgColor='#262C36' />
+                <BoxDimensions bgColor='#262C36' width={50} height={100} />
 
                 {/* Anche se richiamati, ogni component lavora a se */}
-                <BoxDimensions bgColor='#206FEB' />
+                <BoxDimensions bgColor='#206FEB' width={50} height={100} />
             </div>
         </>
     )
