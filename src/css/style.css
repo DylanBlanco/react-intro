@@ -39,6 +39,9 @@ body {
     height: 250px;
     box-shadow: 20px;
     overflow-y: auto;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+    /* scrollbar-width: thin;
+    scrollbar-color: #b46e6e rgba(199, 181, 212, 0); */
 }
 
 .cardJsx h3 {
@@ -57,4 +60,17 @@ ul {
 .row {
     display: flex;
     justify-content: space-between;
+}
+
+.cardJsx::-webkit-scrollbar {
+width: 5px;
+}
+
+.cardJsx::-webkit-scrollbar-track {
+background: #f1f1f100;
+}
+
+.cardJsx::-webkit-scrollbar-thumb {
+background-color: #DADADA;
+border-radius: 20px;
 }

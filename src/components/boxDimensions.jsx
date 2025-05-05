@@ -1,7 +1,7 @@
 import { useState } from "react"
 
 // function BoxDimensions (props) {
-function BoxDimensions ({bgColor, width, height}) {
+function BoxDimensions ({bgColor, width, height, children}) {  //  Props + proprietà Children(serve per poter interpolare contenuto al props)
     // const [dimensions, setDimensions] = useState({
     //     w: 100,
     //     h: 100
@@ -36,6 +36,11 @@ function BoxDimensions ({bgColor, width, height}) {
 
     return(
         <div className="box-dimensions">
+            {/* Proprietà Children */}
+            <div>
+                {children}
+            </div>
+            
             <div className="container">
                 <div className="cardJsx">
                     <div className="input-card">
@@ -47,7 +52,7 @@ function BoxDimensions ({bgColor, width, height}) {
                                 <input
                                     type="range"
                                     min={10}
-                                    max={200}
+                                    max={150}
                                     value={dimensions.w}
                                     onChange={changeWidth}
                                 />
@@ -57,7 +62,7 @@ function BoxDimensions ({bgColor, width, height}) {
                                 <input
                                     type="range"
                                     min={10}
-                                    max={200}
+                                    max={150}
                                     value={dimensions.h}
                                     onChange={changeHeight}
                                 />

@@ -219,6 +219,14 @@ function Input() {
 
                 {/* Anche se richiamati, ogni component lavora a se */}
                 <BoxDimensions bgColor='#206FEB' width={50} height={100} />
+
+                {/* Proprietà Children */}
+                <BoxDimensions bgColor='#217121' width={50} height={100}>
+                    <h1>Proprietà Children</h1>
+                    <div>
+                        <p>La Proprietà Children serve a interpolare un contenuto all'nterno del props</p>
+                    </div>
+                </BoxDimensions>
             </div>
         </>
     )
