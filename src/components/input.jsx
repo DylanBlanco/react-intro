@@ -231,7 +231,7 @@ function Input() {
 
                 {/* InnerBox */}
                 <h1>InnerBox</h1>
-                <InnerBox />
+                <InnerBox width={50} height={100} bgColor='#217121' />
             </div>
         </>
     )
