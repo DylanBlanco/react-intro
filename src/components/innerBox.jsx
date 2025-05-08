@@ -3,14 +3,13 @@ import InInnerbox from "./InInnerbox"
 
 function InnerBox({width, height, color}) {
     // LOGICA  ------------------------------------------------
-    const [param, setParam] = useState({
+    const [params, setParams] = useState({
             w: width,
             h: height,
-            // bgColor: background-color
     })
     
     function changeWidth(e) {
-        setParam(prev => {
+        setParams(prev => {
             return {
                 ...prev,
                 w: e.target.value
@@ -19,7 +18,7 @@ function InnerBox({width, height, color}) {
     }
     
     function changeHeight(e) {
-        setParam(prev => {
+        setParams(prev => {
             return {
                 ...prev,
                 h: e.target.value
@@ -39,7 +38,7 @@ function InnerBox({width, height, color}) {
                             type="range"
                             min={10}
                             max={150}
-                            value={param.w}
+                            value={params.w}
                             onChange={changeWidth}
                         />
                     </div>
@@ -49,22 +48,22 @@ function InnerBox({width, height, color}) {
                             type="range"
                             min={10}
                             max={150}
-                            value={param.h}
+                            value={params.h}
                             onChange={changeHeight}
                         />
                     </div>
                     <div 
                         className="box"
                         style={{
-                            width: param.w + 'px', 
-                            height: param.h + 'px', 
+                            width: params.w + 'px', 
+                            height: params.h + 'px', 
                             backgroundColor: color
                         }}
                     >
                     </div>
                 </div>
 
-                <div>
+                {/* <div>
                     <div>
                         <b>Width</b>
                         <input
@@ -78,10 +77,10 @@ function InnerBox({width, height, color}) {
                         />
                     </div>
                     <div className="box"></div>
-                </div>
+                </div> */}
             </div>
                     
-            <InInnerbox width={width / 2} height={height / 2} backColor={color}/>
+            <InInnerbox width={params.w / 2} height={params.h / 2} backColor={color}/>
         </>
     )
 }
