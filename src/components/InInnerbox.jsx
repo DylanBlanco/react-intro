@@ -1,12 +1,10 @@
 import { useState } from "react"
-import InInnerbox from "./InInnerbox"
 
-function InnerBox({width, height, color}) {
+function InInnerbox ({width, height, backColor}) {
     // LOGICA  ------------------------------------------------
     const [param, setParam] = useState({
             w: width,
             h: height,
-            // bgColor: background-color
     })
     
     function changeWidth(e) {
@@ -28,7 +26,6 @@ function InnerBox({width, height, color}) {
     }
 
 
-    // TEMPLATE  ----------------------------------------------
     return(
         <>
             <div className="container">
@@ -58,32 +55,14 @@ function InnerBox({width, height, color}) {
                         style={{
                             width: param.w + 'px', 
                             height: param.h + 'px', 
-                            backgroundColor: color
+                            backgroundColor: backColor
                         }}
                     >
                     </div>
                 </div>
-
-                <div>
-                    <div>
-                        <b>Width</b>
-                        <input
-                            type="range"
-                        />
-                    </div>
-                    <div>
-                        <b>Height</b>
-                        <input
-                            type="range"
-                        />
-                    </div>
-                    <div className="box"></div>
-                </div>
             </div>
-                    
-            <InInnerbox width={width / 2} height={height / 2} backColor={color}/>
         </>
     )
 }
 
-export default InnerBox
+export default InInnerbox
