@@ -2,3 +2,31 @@
     padding: 5% 0;
     background-color: rgb(238, 166, 118);
 }
+
+
+/* counterApp */
+.counterAppBox {
+    background-color: rgb(212, 129, 77);
+    margin: 0 5%;
+    border-radius: 20px;
+    padding: 3% 2%;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.counterApp {
+    border: 1px solid rgb(66, 63, 63);
+    padding: 2% 3%;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.5);
+    border-radius: 20px;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    gap: 20%;
+}
+
+.counterApp button {
+    padding: 5px 10px;
+    border-color: rgb(66, 99, 71);
+    border-radius: 10px;
+    background-color: rgb(74, 161, 87);
+}

@@ -1,7 +1,12 @@
-function CounterApp() {
+function CounterApp(changeCounter) {
     return(
-        <div className="counterApp">
-            <div></div>
+        <div>
+            <div>
+                <div className="counterApp">
+                    <button>-</button>
+                    <button>+</button>
+                </div>
+            </div>
         </div>
     )
 }
