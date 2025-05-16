@@ -25,6 +25,22 @@ function App() {
                         <CounterApp changeCounter={setCounter}/>
                     </div>
                 </div>
+                <div className="cardCounterAppBox">
+                    <div>
+                        <h2>State Lifting</h2>
+                        <p>significa spostare lo state (stato) da un componente figlio a un componente genitore, per condividerlo tra più componenti.</p>
+                    </div>
+                    <hr />
+                    <span>Counter:</span>
+                    <b>
+                        {counter}
+                    </b>
+                    <hr />
+                    <div>
+                        <h3>CounterApp</h3>
+                        <CounterApp changeCounter={setCounter}/>
+                    </div>
+                </div>
             </div>
         </div>
     )
