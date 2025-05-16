@@ -1,10 +1,10 @@
-function CounterApp(changeCounter) {
+function CounterApp({changeCounter}) {
     return(
         <div>
             <div>
                 <div className="counterApp">
-                    <button>-</button>
-                    <button>+</button>
+                    <button onClick={() => {changeCounter(c => c - 1)}}>-</button>
+                    <button onClick={() => {changeCounter(c => c + 1)}}>+</button>
                 </div>
             </div>
         </div>

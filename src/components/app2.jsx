@@ -10,8 +10,15 @@ function App() {
             <h1>App2</h1>
             <div className="counterAppBox">
                 <div className="cardCounterAppBox">
-                    <h2>Counter</h2>
-                    {counter}
+                    <div>
+                        <h2>State Lifting</h2>
+                        <p>significa spostare lo state (stato) da un componente figlio a un componente genitore, per condividerlo tra più componenti.</p>
+                    </div>
+                    <hr />
+                    <span>Counter:</span>
+                    <b>
+                        {counter}
+                    </b>
                     <hr />
                     <div>
                         <h3>CounterApp</h3>
