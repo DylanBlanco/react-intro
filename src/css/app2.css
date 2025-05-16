@@ -18,10 +18,12 @@
     padding: 2% 3%;
     box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 20px;
-    width: 15%;
+    width: 50%;
     display: flex;
     justify-content: center;
     gap: 20%;
+    margin: auto;
+    margin-top: 5%;
 }
 
 .counterApp button {
@@ -29,4 +31,13 @@
     border-color: rgb(66, 99, 71);
     border-radius: 10px;
     background-color: rgb(74, 161, 87);
+}
+
+.cardCounterAppBox {
+    background-color: blanchedalmond;
+    width: 25%;
+    padding: 2% 3%;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 5px 4px 8px rgba(0, 0, 0, 0.5);
 }

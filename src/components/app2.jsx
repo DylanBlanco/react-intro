@@ -9,9 +9,15 @@ function App() {
         <div className="app2">
             <h1>App2</h1>
             <div className="counterAppBox">
-                <h2>CounterApp</h2>
-                {counter}
-                <CounterApp changeCounter={setCounter}/>
+                <div className="cardCounterAppBox">
+                    <h2>Counter</h2>
+                    {counter}
+                    <hr />
+                    <div>
+                        <h3>CounterApp</h3>
+                        <CounterApp changeCounter={setCounter}/>
+                    </div>
+                </div>
             </div>
         </div>
     )
