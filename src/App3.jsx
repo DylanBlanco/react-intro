@@ -72,33 +72,16 @@ function App() {
                     <div className="cardJsx">
                         <h4>json-placeholder</h4>
                         <div>
-                            <h5>user.name</h5>
+                            <h5>Users</h5>
                             {
                                 users.map((user, i) => (
                                     <div key={user.id}>
-                                        {i}. {user.name}
-                                    </div>
-                                ))
-                            }
-                        </div>
-                        <hr />
-                        <div>
-                            <h5>user.username</h5>
-                            {
-                                users.map((user, i) => (
-                                    <div key={user.id}>
-                                        {i}. {user.username}
-                                    </div>
-                                ))
-                            }
-                        </div>
-                        <hr />
-                        <div>
-                            <h5>user.email</h5>
-                            {
-                                users.map((user, i) => (
-                                    <div key={user.id}>
-                                        {i}. {user.email}
+                                        <div>
+                                            {i}. {user.name} <br />
+                                            ({user.username}) <br />
+                                            {user.email}
+                                        </div>
+                                        <hr />
                                     </div>
                                 ))
                             }
