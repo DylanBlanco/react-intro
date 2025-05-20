@@ -7,6 +7,8 @@ function App() {
     const [counter, setCounter] = useState(10)
     const [counter2, setCounter2] = useState(100)
     const [users, setUsers] = useState([])
+    const [text, setText] = useState('testo da cambiare')
+
 
     // onLoad && onUpload
     useEffect(() => {
@@ -31,7 +33,16 @@ function App() {
             .then(json => {
                 setUsers(json)  // Richiamo del json in setUsers
             })
-        }, [])
+    }, [])
+    
+    // ChangeText
+    useEffect(() => {
+        changeText
+    }, [text])
+
+    function changeText () {
+        return ('Nuovo Testo')
+    }
 
 
     // Template -------------------------------------
@@ -40,6 +51,22 @@ function App() {
             <h1>App3</h1>
             <div className='container-app3'>
                 <h2>Use-Effect</h2>
+                <div>
+                    <div>
+                        Ti permette di dire a React: <br />
+                        “Esegui questa funzione dopo che il componente è stato renderizzato o aggiornato”. <hr />
+                    </div>
+                    <div>
+                        Esempi di effetti collaterali:
+                        <ol>
+                            <li>Chiamate API</li>
+                            <li>Interazioni con il DOM</li>
+                            <li>Event listeners</li>
+                            <li>Timer / setInterval</li>
+                            <li>Sincronizzare lo stato con qualcosa di esterno</li>
+                        </ol>
+                    </div>
+                </div>
                 <div className="row">
                     <div className="cardJsx">
                         <h4>Counter</h4>
@@ -93,6 +120,17 @@ function App() {
                                     Nessun Utente
                                 </div>
                             )}
+                        </div>
+                    </div>
+
+                    <div className="cardJsx">
+                        <div>
+                            <h1>
+                                {text}
+                            </h1>
+                        </div>
+                        <div>
+                            <button onClick={() => {setText(changeText)}}>change</button>
                         </div>
                     </div>
                 </div>

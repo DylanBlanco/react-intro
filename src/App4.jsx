@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import './css/app4.css'
 
 function App () {
@@ -15,10 +15,21 @@ function App () {
             </h1>
             <div className='container-app4'>
                 <h2>UseRef</h2>
-                <p>UseRef salva un valore persistente tra i render senza causare re-render</p>
+                <div>
+                    Ha due usi principali:
+                    <ol>
+                        <li>
+                            UseRef salva un valore persistente tra i render senza causare re-render
+                        </li>
+                        <li>
+                            Accedere agli elementi HTML del nostro JSX
+                        </li>
+                    </ol>
+                </div>
 
                 <div className='row-app4'>
                     <div className="cardJsx">
+                        <h3>Valore persistente</h3>
                         <div>
                             CountRef: <b>{countRef.current}</b>
                         </div>
@@ -38,6 +49,11 @@ function App () {
                                 }}>Aumenta Counter</button>
                             </div>
                         </div>
+                    </div>
+
+                    <div className="cardJsx">
+                        <h3>Elemento Dom</h3>
+                        
                     </div>
                 </div>
             </div>
