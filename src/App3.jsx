@@ -97,6 +97,7 @@ function App() {
                     </div>
                 </div>
             </div>
+            useRef è un hook che mantiene il suo valore tra i vari ref
         </div>
     )
 }

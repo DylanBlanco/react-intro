@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import App2 from './components/app2.jsx'
 import App3 from './App3.jsx'
+import App4 from './App4.jsx'
 
 // Style -----------------------------------------
 import './css/style.css'
@@ -37,6 +38,9 @@ createRoot(document.getElementById('root')).render(
 
         {/* UseEffect */}
         <App3 />
+
+        {/* UseRef */}
+        <App4 />
 
         {/* Conditions */}
         <Condition />
