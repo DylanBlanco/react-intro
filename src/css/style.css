@@ -6,6 +6,13 @@ body {
     background-color: #bfc9d2;
 }
 
+.row {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
 .counter-body {
     background-color: rgb(123, 123, 126);
 }

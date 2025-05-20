@@ -6,3 +6,12 @@
 .app3 .container-app3 {
     padding: 0 5%;
 }
+
+.app3 .container-app3 .cardJsx .counter-box {
+    display: flex;
+    gap: 5%;
+}
+
+.app3 .container-app3 .cardJsx .counter-box div {
+    width: 20%;
+}
