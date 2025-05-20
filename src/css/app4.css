@@ -6,3 +6,18 @@
 .container-app4 {
     padding: 0 5%;
 }
+
+.container-app4 .row-app4 {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.container-app4 .row-app4 .cardJsx .box-count {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-app4 .row-app4 .cardJsx .box-count div {
+    width: 40%;
+}
