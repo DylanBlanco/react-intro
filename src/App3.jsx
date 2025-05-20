@@ -73,18 +73,26 @@ function App() {
                         <h4>json-placeholder</h4>
                         <div>
                             <h5>Users</h5>
-                            {
-                                users.map((user, i) => (
-                                    <div key={user.id}>
-                                        <div>
-                                            {i}. {user.name} <br />
-                                            ({user.username}) <br />
-                                            {user.email}
+
+                            {/* Richiamo json con operatore ternario */}
+                            {users.length > 0 ? (  // ? operatore ternario
+                                <div>
+                                    {users.map((user, i) => (
+                                        <div key={user.id}>
+                                            <div>
+                                                {i}. {user.name} <br />
+                                                ({user.username}) <br />
+                                                {user.email}
+                                            </div>
+                                            <hr />
                                         </div>
-                                        <hr />
-                                    </div>
-                                ))
-                            }
+                                    ))}
+                                </div>
+                            ) : (
+                                <div>
+                                    Nessun Utente
+                                </div>
+                            )}
                         </div>
                     </div>
                 </div>
