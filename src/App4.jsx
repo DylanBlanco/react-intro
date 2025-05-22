@@ -5,6 +5,17 @@ function App () {
     // Logica -------------------------------------------------
     const countRef = useRef(10);
     const [counter, setCounter] = useState(0);
+    const boxRef = useRef(null)
+    const textBox = 'Fai click!'
+
+    useEffect(() => {
+        const box = boxRef.current
+        
+        box.addEventListener('click', () => {
+            box.style.backgroundColor = '#E8D3BB'
+            box.innerHTML = 'hai clickato'
+        })
+    }, [])
 
 
     // Template -----------------------------------------------
@@ -53,7 +64,10 @@ function App () {
 
                     <div className="cardJsx">
                         <h3>Elemento Dom</h3>
-                        
+                        <p>Modifica elemento del Dom</p>
+                        <div ref={boxRef} className='box-dom'>
+                            {textBox}
+                        </div>
                     </div>
                 </div>
             </div>

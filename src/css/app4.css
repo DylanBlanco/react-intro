@@ -21,3 +21,13 @@
 .container-app4 .row-app4 .cardJsx .box-count div {
     width: 40%;
 }
+
+.container-app4 .cardJsx .box-dom {
+    background-color: azure;
+    width: 30%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
