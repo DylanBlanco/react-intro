@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import UseReducer from './components/UseReducer';
 import './css/app4.css'
 
 function App () {
@@ -71,6 +72,8 @@ function App () {
                     </div>
                 </div>
             </div>
+
+            <UseReducer />
         </div>
     )
 }
