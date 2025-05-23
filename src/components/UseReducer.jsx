@@ -18,6 +18,11 @@ function UseReducer () {
                     ...state,
                     y: state.y * 1.5
                 }
+            case 'change_z':
+                return {
+                    ...state,
+                    z: state.z +50
+                }
         }
     }, {
         x: 10,
@@ -55,12 +60,17 @@ function UseReducer () {
                     <div>
                         <button onClick={() => {
                             setPoint({type: 'change_x'})
-                        }}>Cambia x</button>
+                        }}>Cambia x</button> *2
                     </div>
                     <div>
                         <button onClick={() => {
                             setPoint({type: 'change_y'})
-                        }}>Cambia y</button>
+                        }}>Cambia y</button> *1.5
+                    </div>
+                    <div>
+                        <button onClick={() => {
+                            setPoint({type: 'change_z'})
+                        }}> Cambia z</button> +50
                     </div>
                 </div>
             </div>
