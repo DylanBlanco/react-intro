@@ -38,6 +38,11 @@ function UseReducer () {
                     a: action.e.target.value,
                     b: state.b
                 }
+            case 'change_b':
+                return {
+                    ...state,
+                    b: action.e.target.value
+                }
         }
     }, 
     {
@@ -100,7 +105,9 @@ function UseReducer () {
                         </div>
                         <div>
                             Frase B
-                            {/* <input value={text.b} type="text" /> */}
+                            <input type="text" value={text.b} onChange={(e) => {
+                                setText({type: 'change_b', e})
+                            }} />
                         </div>
                         <hr />
                         <div>
@@ -108,7 +115,7 @@ function UseReducer () {
                                 Frase A: <b>{text.a}</b>
                             </div>
                             <div>
-                                Frase B: 
+                                Frase B: <b>{text.b}</b>
                             </div>
                         </div>
                     </div>
