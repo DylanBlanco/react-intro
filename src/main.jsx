@@ -15,6 +15,7 @@ import Counter from './components/counter.jsx'
 import Array from './components/array.jsx'
 import Input from './components/input.jsx'
 import Condition from './components/condition.jsx'
+import App5 from './App5.jsx'
 
 
 createRoot(document.getElementById('root')).render(
@@ -43,6 +44,6 @@ createRoot(document.getElementById('root')).render(
         <App4 />
 
         {/* Conditions */}
-        <Condition />
+        <App5 />
     </StrictMode>,
 )
