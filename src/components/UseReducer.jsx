@@ -7,7 +7,18 @@ function UseReducer () {
     // action: funzione per inviare azioni
     // reducer: funzione che riceve lo stato corrente e un'azione, e restituisce il nuovo stato
     const [point, setPoint] = useReducer((state, action) => {
-
+        switch(action.type) {
+            case 'change_x':
+                return{
+                    ...state,  // destructuring
+                    x: state.x * 2
+                }
+            case 'change_y':
+                return {
+                    ...state,
+                    y: state.y * 1.5
+                }
+        }
     }, {
         x: 10,
         y: 20,
@@ -43,11 +54,13 @@ function UseReducer () {
                     </div>
                     <div>
                         <button onClick={() => {
-                            setPoint()
+                            setPoint({type: 'change_x'})
                         }}>Cambia x</button>
                     </div>
                     <div>
-                        <button>Cambia x</button>
+                        <button onClick={() => {
+                            setPoint({type: 'change_y'})
+                        }}>Cambia y</button>
                     </div>
                 </div>
             </div>
