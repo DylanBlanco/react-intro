@@ -30,6 +30,21 @@ function UseReducer () {
         z: 30
     })
 
+    const [text, setText] = useReducer((state, action) => {
+        switch(action.type) {
+            case 'change_a':
+                return{
+                    // ...state,
+                    a: action.e.target.value,
+                    b: state.b
+                }
+        }
+    }, 
+    {
+        a: '',
+        b: ''
+    })
+
     return(
         <>
             <div className="UseReducer">
@@ -50,27 +65,52 @@ function UseReducer () {
                     </ol>
                 </div>
                 
-                <div className="cardJsx">
-                    <h3>Reducer</h3>
-                    <div>
-                        x: {point.x} <br />
-                        y: {point.y} <br />
-                        z: {point.z}
+                <div className="row-app4">
+                    <div className="cardJsx">
+                        <h3>Reducer</h3>
+                        <div>
+                            x: {point.x} <br />
+                            y: {point.y} <br />
+                            z: {point.z}
+                        </div>
+                        <div>
+                            <button onClick={() => {
+                                setPoint({type: 'change_x'})
+                            }}>Cambia x</button> *2
+                        </div>
+                        <div>
+                            <button onClick={() => {
+                                setPoint({type: 'change_y'})
+                            }}>Cambia y</button> *1.5
+                        </div>
+                        <div>
+                            <button onClick={() => {
+                                setPoint({type: 'change_z'})
+                            }}> Cambia z</button> +50
+                        </div>
                     </div>
-                    <div>
-                        <button onClick={() => {
-                            setPoint({type: 'change_x'})
-                        }}>Cambia x</button> *2
-                    </div>
-                    <div>
-                        <button onClick={() => {
-                            setPoint({type: 'change_y'})
-                        }}>Cambia y</button> *1.5
-                    </div>
-                    <div>
-                        <button onClick={() => {
-                            setPoint({type: 'change_z'})
-                        }}> Cambia z</button> +50
+
+                    <div className="cardJsx">
+                        <h3>Input</h3>
+                        <div>
+                            Frase A
+                            <input type="text" value={text.a} onChange={(e) => {
+                                setText({type: 'change_a', e})
+                            }}  />
+                        </div>
+                        <div>
+                            Frase B
+                            {/* <input value={text.b} type="text" /> */}
+                        </div>
+                        <hr />
+                        <div>
+                            <div>
+                                Frase A: <b>{text.a}</b>
+                            </div>
+                            <div>
+                                Frase B: 
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
