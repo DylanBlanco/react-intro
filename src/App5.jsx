@@ -15,7 +15,7 @@ function App5 () {
                 <h2>UseMemo</h2>
                 <div>
                     <p>
-                        è un hook che serve a memorizzare in <b>cache</b> un determinato valore e ricalcolarlo solo quando serve.
+                        è un hook che serve a memorizzare in <b>cache</b> un determinato <b>valore</b> e ricalcolarlo solo quando serve.
                     </p>
                     <p>
                         useMemo evita che una funzione venga rieseguita ogni volta che il componente si aggiorna, se i dati usati non sono cambiati.
@@ -36,6 +36,12 @@ function App5 () {
                         </div>
                         <button onClick={() => setCounter2(c => c + 1)}>Incrementa counter2</button>
                     </div>
+                </div>
+            </div>
+            <div className="container-app5">
+                <h2>UseCallback</h2>
+                <div>
+                    <p>UseCallback è un hook che serve e memorizzare in <b>cache</b> una <b>funzione</b> tra i render</p>
                 </div>
             </div>
         </div>
