@@ -99,13 +99,13 @@ function UseReducer () {
                         <h3>Input</h3>
                         <div>
                             Frase A
-                            <input type="text" value={text.a} onChange={(e) => {
+                            <input type="text" value={text.a} onChange={(e) => {  //onChange è un evento che si usa principalmente con elementi di input
                                 setText({type: 'change_a', e})
                             }}  />
                         </div>
                         <div>
                             Frase B
-                            <input type="text" value={text.b} onChange={(e) => {
+                            <input type="text" value={text.b} onChange={(e) => { // onChange è un evento che si usa principalmente con elementi di input
                                 setText({type: 'change_b', e})
                             }} />
                         </div>
