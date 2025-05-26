@@ -30,12 +30,11 @@ function App5 () {
                         </div>
                         <button onClick={() => setCounter(c => c + 1)}>Incrementa</button>
                         <hr />
+                        <h3>Counter (useMemo)</h3>
                         <div>
                             Counter2: <b>{counter2}</b>
                         </div>
                         <button onClick={() => setCounter2(c => c + 1)}>Incrementa counter2</button>
-                        <hr />
-                        {helloValue}
                     </div>
                 </div>
             </div>
