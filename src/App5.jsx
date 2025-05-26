@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 import './css/app5.css'
 
 function App5 () {
@@ -6,6 +6,15 @@ function App5 () {
     const [counter, setCounter] = useState(0)
     const [counter2, setCounter2] = useState(0)
     const helloValue = useMemo(() => hello(counter), [counter])
+
+    const incrementCounter = () => setCounter(c => c + 1)
+    const incrementCounter2 = () => setCounter2(c => c + 1)
+
+    const [conto, setConto] = useState(0)
+    const [conto2, setConto2] = useState(0)
+    const aumentaCounter = useCallback(() => setConto(c => c + 1), [counter])
+    const aumentaCounter2 = useCallback(() => setConto2(c => c + 1), [counter2])
+
 
     // Template  ----------------------------------------------
     return (
@@ -28,13 +37,13 @@ function App5 () {
                         <div>
                             Counter: <b>{counter}</b>
                         </div>
-                        <button onClick={() => setCounter(c => c + 1)}>Incrementa</button>
+                        <button onClick={incrementCounter}>Incrementa</button>
                         <hr />
                         <h3>Counter (useMemo)</h3>
                         <div>
                             Counter2: <b>{counter2}</b>
                         </div>
-                        <button onClick={() => setCounter2(c => c + 1)}>Incrementa counter2</button>
+                        <button onClick={incrementCounter2}>Incrementa counter2</button>
                     </div>
                 </div>
             </div>
@@ -42,6 +51,27 @@ function App5 () {
                 <h2>UseCallback</h2>
                 <div>
                     <p>UseCallback è un hook che serve e memorizzare in <b>cache</b> una <b>funzione</b> tra i render</p>
+                </div>
+                <div className="cardJsx">
+                    <div>
+                        <h3>Counter</h3>
+                        <div>
+                            Counter: <b>{conto}</b>
+                        </div>
+                        <div>
+                            <button onClick={aumentaCounter}>Incrementa</button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div>
+                        <h3>Counter2</h3>
+                        <div>
+                            Counter: <b>{conto2}</b>
+                        </div>
+                        <div>
+                            <button onClick={aumentaCounter2}>Incrementa Counter2</button>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
