@@ -1,0 +1,9 @@
+.app6 {
+    padding: 5% 0;
+    background: #a67e7e;
+    background: linear-gradient(90deg, rgb(165, 110, 110) 10%, rgba(176, 91, 91, 1) 50%, rgba(189, 81, 81, 1) 90%);
+}
+
+.container-app6 {
+    padding: 0 5%;
+}

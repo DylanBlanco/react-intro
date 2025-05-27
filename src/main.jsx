@@ -4,6 +4,7 @@ import App from './App.jsx'
 import App2 from './components/app2.jsx'
 import App3 from './App3.jsx'
 import App4 from './App4.jsx'
+import App6 from './App6.jsx'
 
 // Style -----------------------------------------
 import './css/style.css'
@@ -43,7 +44,10 @@ createRoot(document.getElementById('root')).render(
         {/* UseRef */}
         <App4 />
 
-        {/* Conditions */}
+        {/* UseMemo && UseCallback */}
         <App5 />
+
+        {/* Custom Hook */}
+        <App6 />
     </StrictMode>,
 )
