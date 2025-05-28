@@ -13,7 +13,10 @@ function App() {
             <div className="container-app6">
                 <h2>Custom Hook</h2>
                 <div>
-                    <p>Descrizione Hook</p>
+                    <p>
+                        Un custom hook in React è una funzione personalizzata che utilizza hook interni, <br />
+                        per incapsulare logica riutilizzabile tra componenti.
+                    </p>
                 </div>
 
                 <div className="row">
