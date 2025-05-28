@@ -22,6 +22,7 @@ function App() {
                     </p>
                 </div>
 
+                {/* Custom Hook - useCounter */}
                 <div className="row">
                     <div className="cardJsx">
                         <h3>Custom Hook</h3>
@@ -36,6 +37,7 @@ function App() {
                         </div>
                     </div>
 
+                    {/* custom hook - useMoal */}
                     <div className="cardJsx">
                         <h3>UseModal</h3>
                         <button onClick={openModal}>Apri Modale</button>
@@ -46,6 +48,9 @@ function App() {
                             </div>
                         )}
                     </div>
+
+                    {/* Custom Hook - use */}
+                    <div className="cardJsx"></div>
                 </div>
             </div>
         </div>
