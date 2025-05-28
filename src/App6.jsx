@@ -4,6 +4,7 @@ import './css/app6.css'
 function App() {
     // Logica  ------------------------------------------------
     const {counter, incrementCounter, decrementCounter} = useCounter(10)
+    
 
 
     // Template  ----------------------------------------------
@@ -32,6 +33,7 @@ function App() {
                             </div>
                         </div>
                     </div>
+
                 </div>
             </div>
         </div>
@@ -51,5 +53,6 @@ function useCounter(startValue) {
 
     return {counter, incrementCounter, decrementCounter}
 }
+
 
 export default App
