@@ -1,10 +1,12 @@
 import { useState } from 'react'
+import useModal from './Custom Hook/useModal'
 import './css/app6.css'
 
 function App() {
     // Logica  ------------------------------------------------
     const {counter, incrementCounter, decrementCounter} = useCounter(10)
     
+    const { isOpen, openModal, closeModal } = useModal()
 
 
     // Template  ----------------------------------------------
@@ -34,6 +36,16 @@ function App() {
                         </div>
                     </div>
 
+                    <div className="cardJsx">
+                        <h3>UseModal</h3>
+                        <button onClick={openModal}>Apri Modale</button>
+                        {isOpen && (
+                            <div>
+                            <p>Modale Aperto</p>
+                            <button onClick={closeModal}>Chiudi</button>
+                            </div>
+                        )}
+                    </div>
                 </div>
             </div>
         </div>
