@@ -7,3 +7,7 @@
 .container-app6 {
     padding: 0 5%;
 }
+.container-app6 .box-btn {
+    display: flex;
+    gap: 15%;
+}

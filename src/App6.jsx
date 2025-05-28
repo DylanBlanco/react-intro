@@ -18,7 +18,16 @@ function App() {
 
                 <div className="row">
                     <div className="cardJsx">
-
+                        <h3>Custom Hook</h3>
+                        <div>
+                            <div>
+                                Counter: <b>{counter}</b>
+                            </div>
+                            <div className='box-btn'>
+                                <button onClick={decrementCounter}>Decrementa</button>
+                                <button onClick={incrementCounter}>Incrementa</button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
