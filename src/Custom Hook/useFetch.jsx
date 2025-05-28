@@ -12,23 +12,23 @@ export default function useFetch(url) {
         setError(null);
 
         fetch(url)
-        .then((res) => {
-            if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
-            return res.json();
-        })
-        .then((json) => {
-            if (isMounted) setData(json);
-        })
-        .catch((err) => {
-            if (isMounted) setError(err.message);
-        })
-        .finally(() => {
-            if (isMounted) setLoading(false);
-        });
+            .then((res) => {
+                if (!res.ok) throw new Error(`HTTP error! Status: ${res.status}`);
+                return res.json();
+            })
+            .then((json) => {
+                if (isMounted) setData(json);
+            })
+            .catch((err) => {
+                if (isMounted) setError(err.message);
+            })
+            .finally(() => {
+                if (isMounted) setLoading(false);
+            });
 
         // Pulizia se il componente viene smontato
         return () => {
-        isMounted = false;
+            isMounted = false;
         };
     }, [url]);
 
