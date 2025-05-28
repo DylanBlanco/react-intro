@@ -1,12 +1,25 @@
 import { useState } from 'react'
 import useModal from './Custom Hook/useModal'
+import useFetch from './Custom Hook/useFetch'
 import './css/app6.css'
 
 function App() {
     // Logica  ------------------------------------------------
     const {counter, incrementCounter, decrementCounter} = useCounter(10)
     
-    const { isOpen, openModal, closeModal } = useModal()
+    const { isOpen, openModal, closeModal } = useModal()  // custom hook - useModal
+    const { data, loading, error } = useFetch('https://jsonplaceholder.typicode.com/posts');  // custom hook - useFetch
+
+    if (loading)
+        return
+            <p>
+                Caricamento...
+            </p>
+    if (error)
+        return
+            <p>
+                Errore: {error}
+            </p>
 
 
     // Template  ----------------------------------------------
@@ -50,7 +63,20 @@ function App() {
                     </div>
 
                     {/* Custom Hook - use */}
-                    <div className="cardJsx"></div>
+                    <div className="cardJsx">
+                        <h3>useFetch</h3>
+                        <div>
+                            <ul>
+                                {data.map(post => (
+                                    <li key={post.id}>
+                                        <strong>{post.title}</strong>
+                                        <p>{post.body}</p>
+                                        <hr />
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
