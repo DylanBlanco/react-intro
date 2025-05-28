@@ -64,7 +64,7 @@ function App() {
 
                     {/* Custom Hook - use */}
                     <div className="cardJsx">
-                        <h3>useFetch</h3>
+                        <h3>useFetch(API)</h3>
                         <div>
                             <ul>
                                 {data.map(post => (
