@@ -1,5 +1,6 @@
-import { useContext, useState } from 'react'
+import { useState } from 'react'
 import './css/app7.css'
+import UseContext from './Hook/useContext'
 
 
 export default function App() {
@@ -16,9 +17,16 @@ export default function App() {
                     </p>
                 </div>
 
-                <div className="cardJsx">
-                    <div>
-                        <CompA value={value} setValue={setValue} />
+                <div className="row">
+                    <div className="cardJsx">
+                        <h3>Prop Drilling</h3>
+                        <div>
+                            <CompA value={value} setValue={setValue} />
+                        </div>
+                    </div>
+
+                    <div className="cardJsx">
+                        <UseContext />
                     </div>
                 </div>
             </div>
@@ -29,9 +37,9 @@ export default function App() {
 function CompA({value, setValue}) {
     return (
         <div>
+            <hr />
             CompA
             <div>
-                compA:
                 <CompB value={value} setValue={setValue} />
             </div>
         </div>
@@ -41,6 +49,7 @@ function CompA({value, setValue}) {
 function CompB({value, setValue}) {
     return (
         <div>
+            <hr />
             CompB
             <div>
                 <CompC value={value} setValue={setValue} />
@@ -52,6 +61,7 @@ function CompB({value, setValue}) {
 function CompC({value, setValue}) {
     return (
         <div>
+            <hr />
             CompC
             <div>
                 Value: {value}
