@@ -7,3 +7,7 @@
 .app7 .container-app7 {
     padding: 0 5%;
 }
+
+.app7 .app7-ctx {
+    width: calc(100% - 40%);
+}

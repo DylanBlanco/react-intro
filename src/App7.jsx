@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './css/app7.css'
-import UseContext from './Hook/useContext'
+import Context from './Hook/Context'
 
 
 export default function App() {
@@ -24,9 +24,9 @@ export default function App() {
                             <CompA value={value} setValue={setValue} />
                         </div>
                     </div>
-
-                    <div className="cardJsx">
-                        <UseContext />
+                    
+                    <div className='app7-ctx'>
+                        <Context />
                     </div>
                 </div>
             </div>
