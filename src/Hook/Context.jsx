@@ -34,16 +34,19 @@ function ValA() {
 }
 
 function ValB() {
-    const ctx = useContext(AppContext)
+    // const ctx = useContext(AppContext)
+    const {value, setValue} = useContext(AppContext)  // Proprietà destrutturate
 
     return (
         <div>
             <div>
-                Value: <strong>{ctx.value}</strong>
+                {/* Value: <strong>{ctx.value}</strong> */}
+                Value: <strong>{value}</strong>
             </div>
             
             <div>
-                <button onClick={() => ctx.setValue(v => v + 5)}>Change Value</button>
+                {/* <button onClick={() => ctx.setValue(v => v + 5)}>Change Value</button> */}
+                <button onClick={() => setValue(v => v + 5)}>Change Value</button>
             </div>
         </div>
     )
