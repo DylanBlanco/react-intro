@@ -1,25 +1,27 @@
-import { useState } from "react"
+import { createContext, useState } from "react"
 import "../css/style.css"
 import "../css/app7_context.css"
 
 
-// const AppContext = createContext()
+const AppContext = createContext()
 
 export default function UseContext () {
     const [value, setValue] = useState(5)
     
     return (
-        <div className="app7-context">
-            <h3>UseContext</h3>
-            <div className="row-ctx">
+        <AppContext.Provider value={{value,setValue}}>
+            <div className="app7-context">
+                <h3>UseContext</h3>
+                <div className="row-ctx">
 
-                <div className="card-ctx">
-                    <h3>Context.jsx</h3>
+                    <div className="card-ctx">
+                        <h3>Context.jsx</h3>
 
-                    <ValA />
+                        <ValA />
+                    </div>
                 </div>
             </div>
-        </div>
+        </AppContext.Provider>
     )
 }
 
