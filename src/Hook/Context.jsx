@@ -9,7 +9,7 @@ export default function UseContext () {
     const [value, setValue] = useState(5)
     
     return (
-        <AppContext.Provider value={{value,setValue}}>
+        <AppContext.Provider value={{value,setValue, appTitle: 'Contenuto Aggiunto'}}>
             <div className="app7-context">
                 <h3>UseContext</h3>
                 <div className="row-ctx">
@@ -35,7 +35,7 @@ function ValA() {
 
 function ValB() {
     // const ctx = useContext(AppContext)
-    const {value, setValue} = useContext(AppContext)  // Proprietà destrutturate
+    const {value, setValue, appTitle} = useContext(AppContext)  // Proprietà destrutturate
 
     return (
         <div>
@@ -47,6 +47,17 @@ function ValB() {
             <div>
                 {/* <button onClick={() => ctx.setValue(v => v + 5)}>Change Value</button> */}
                 <button onClick={() => setValue(v => v + 5)}>Change Value</button>
+            </div>
+
+            <hr />
+
+            <div>
+                <div>
+                    Contenuto Aggiunto cin useContext:
+                </div>
+                <b>
+                    {appTitle}
+                </b>
             </div>
         </div>
     )
