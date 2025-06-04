@@ -16,32 +16,32 @@ export default function UseContext () {
                 <div className="card-ctx">
                     <h3>Context.jsx</h3>
 
-                    <ValA value={value} setValue={setValue} />
+                    <ValA />
                 </div>
             </div>
         </div>
     )
 }
 
-function ValA({value, setValue}) {
+function ValA() {
     return (
         <div>
-            <ValB value={value} setValue={setValue} />
+            <ValB />
         </div>
     )
 }
 
-function ValB({value, setValue}) {
+function ValB() {
     return (
         <div>
-            
+{/*             
             <div>
                 Value: <strong>{value}</strong>
             </div>
             
             <div>
                 <button onClick={() => setValue(v => v + 5)}>Change Value</button>
-            </div>
+            </div> */}
         </div>
     )
 }
