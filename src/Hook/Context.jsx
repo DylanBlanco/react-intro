@@ -1,9 +1,9 @@
-import { createContext, useState } from "react"
+import { createContext, useContext, useState } from "react"
 import "../css/style.css"
 import "../css/app7_context.css"
 
 
-const AppContext = createContext()
+const AppContext = createContext(null)  // (null) Valore di default
 
 export default function UseContext () {
     const [value, setValue] = useState(5)
@@ -34,16 +34,17 @@ function ValA() {
 }
 
 function ValB() {
+    const ctx = useContext(AppContext)
+
     return (
         <div>
-{/*             
             <div>
-                Value: <strong>{value}</strong>
+                Value: <strong>{ctx.value}</strong>
             </div>
             
             <div>
-                <button onClick={() => setValue(v => v + 5)}>Change Value</button>
-            </div> */}
+                <button onClick={() => ctx.setValue(v => v + 5)}>Change Value</button>
+            </div>
         </div>
     )
 }
