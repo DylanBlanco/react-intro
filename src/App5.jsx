@@ -1,4 +1,4 @@
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, /* useMemo, */ useState } from 'react'
 import './css/app5.css'
 
 function App5 () {
@@ -78,10 +78,10 @@ function App5 () {
     )
 }
 
-function hello(counter) {
-    console.log('Hello World!');
-    return 'Hello World!!!' + counter;
-}
+// function hello(counter) {
+//     console.log('Hello World!');
+//     return 'Hello World!!!' + counter;
+// }
 
 
 export default App5
