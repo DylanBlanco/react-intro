@@ -5,7 +5,7 @@ function App5 () {
     // Logica  ------------------------------------------------
     const [counter, setCounter] = useState(0)
     const [counter2, setCounter2] = useState(0)
-    const helloValue = useMemo(() => hello(counter), [counter])
+    // const helloValue = useMemo(() => hello(counter), [counter])
 
     const incrementCounter = () => setCounter(c => c + 1)
     const incrementCounter2 = () => setCounter2(c => c + 1)
